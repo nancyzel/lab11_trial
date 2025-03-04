@@ -4,6 +4,18 @@ namespace lab11_trial
 {
     internal class Program
     {
+        static void AddNewElementToSortedList(SortedList currentSortedList)
+        {
+            if (currentSortedList == null)
+            {
+                Console.WriteLine("Список пустой, поэтому в него нельзя добавить элемент");
+            }
+            else
+            {
+                Console.WriteLine("Введите ключ");
+            }
+        }
+
         static void Main(string[] args)
         {
             //Task 1
@@ -24,8 +36,10 @@ namespace lab11_trial
             {
                 Console.WriteLine(controlElementsSortedList.GetKey(i) + " " + controlElementsSortedList.GetByIndex(i));
             }
-            
+
             // ввод и удаление объектов по ключу здесь>>>>
+            SortedList controlElementsSortedList1 = null;
+            controlElementsSortedList1.Add("5", "6");
 
             Console.WriteLine(controlElementsSortedList.Capacity);
         }
